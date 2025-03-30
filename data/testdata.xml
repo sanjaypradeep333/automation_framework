@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestData>
+    <Login>
+        <User username="standard_user" password="secret_sauce" expected="success"/>
+        <User username="locked_out_user" password="secret_sauce" expected="failure"/>
+    </Login>
+</TestData>
