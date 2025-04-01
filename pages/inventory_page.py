@@ -1,5 +1,7 @@
+import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.support.expected_conditions import text_to_be_present_in_element
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -57,5 +59,6 @@ class InventoryPage:
     def logout_user(self):
         """Logs out the user"""
         self.driver.find_element(By.ID, "react-burger-menu-btn").click()
+        time.sleep(2)
         self.driver.find_element(By.ID, "logout_sidebar_link").click()
 
