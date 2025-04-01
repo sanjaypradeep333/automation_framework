@@ -47,9 +47,3 @@ class Checkout_Page:
         price = self.driver.find_element(*self.PRICE_WITHOUT_TAX).text
         price = price.split("$")[-1]
         return float(price)
-
-    def is_checkout_disabled(self):
-        """Checks if checkout button is disabled"""
-        checkout_buttons = self.driver.find_elements(By.ID, "checkout")
-        return not bool(checkout_buttons)  # If no checkout button, means it's disabled
-

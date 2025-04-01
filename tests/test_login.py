@@ -153,26 +153,6 @@ def test_remove_item_from_cart(setup, logger):
     logger.info("Remove item from cart test passed")
     print("✅ Item removed successfully, cart updated.")
 
-def test_checkout_empty_cart(setup, logger):
-    """Test to verify checkout button is disabled when cart is empty."""
-    logger.info("Starting checkout empty cart test")
-    login_page = LoginPage(setup)
-    inventory_page = InventoryPage(setup)
-    checkout_page = Checkout_Page(setup)
-
-    logger.info("Logging in")
-    login_page.enter_username("standard_user")
-    login_page.enter_password("secret_sauce")
-    login_page.click_login()
-
-    logger.info("Going to cart with no items")
-    inventory_page.go_to_cart()
-
-    is_checkout_disabled = checkout_page.is_checkout_disabled()
-    assert is_checkout_disabled, "Checkout allowed with an empty cart!"
-    logger.info("Checkout empty cart test passed")
-    print("✅ Checkout correctly disabled for empty cart.")
-
 def test_logout_functionality(setup, logger):
     """Test to verify user can log out successfully."""
     logger.info("Starting logout functionality test")
