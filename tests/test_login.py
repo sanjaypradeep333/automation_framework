@@ -1,9 +1,8 @@
 # tests/test_login.py
 import time
 import pytest
-from selenium import webdriver
 from utils.excel_utils import get_test_data
-from checkout_page import Checkout_Page
+from pages.checkout_page import Checkout_Page
 from pages.LoginPage import LoginPage
 from pages.inventory_page import InventoryPage
 from utils.xml_utils import get_test_data_from_xml
